@@ -284,6 +284,73 @@ ul {
     padding-right: 1.5rem;
 }
 
+/* Estilos base de la alerta */
+.custom-alert {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336; /* Rojo por defecto */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    min-width: 300px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Clase para mostrar la alerta */
+.show-alert {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+/* Botón de cerrar */
+.custom-alert button {
+    background-color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Colores según tipo */
+.alert-red {
+    background-color: #f44336; /* Rojo */
+}
+
+.alert-red button {
+    color: #f44336;
+}
+
+.alert-red button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.alert-blue {
+    background-color: #2196F3; /* Azul */
+}
+
+.alert-blue button {
+    color: #2196F3;
+}
+
+.alert-blue button:hover {
+    background-color: #2196F3;
+    color: white;
+}
+
 
 /* responsividad */
 

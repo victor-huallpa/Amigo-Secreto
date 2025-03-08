@@ -8,22 +8,40 @@ const btnSortear = document.getElementById('text-btn');
 const lista = document.getElementById('listaAmigos');
 const resultado = document.getElementById('resultado');
 
+//formatear texto
+function formatear(texto) {
+    // Dividir el texto en palabras y capitalizar cada una
+    let palabras = texto.split(" ").map(palabra => {
+        return palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase();
+    });
+
+    // Unir las palabras en un solo string
+    let textoFormateado = palabras.join(" ");
+
+    //retornamos textoforamteado
+    return textoFormateado;
+    // Guardar en la lista
+}
+
 // Agregar un amigo a la lista
 function agregarAmigo() {
     const newAmigo = inputAmigo.value.trim();
 
+    //foramteamos texto
+    const formatearTexto = formatear(newAmigo);
+
     // Validaciones
-    if (newAmigo === '') {
+    if (formatearTexto === '') {
         mostrarAlerta('Por favor ingresa un amigo');
         return;
     }
-    if (listaAmigos.includes(newAmigo)) {
-        mostrarAlerta(`Este amigo ${newAmigo} ya fue agregado`);
+    if (listaAmigos.includes(formatearTexto)) {
+        mostrarAlerta(`Este amigo ${formatearTexto} ya fue agregado`);
         return;
     }
 
     // Agregar y actualizar UI
-    listaAmigos.push(newAmigo);
+    listaAmigos.push(formatearTexto);
     inputAmigo.value = '';
     actualizarLista();
     actualizarBotones();

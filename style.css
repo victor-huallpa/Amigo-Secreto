@@ -1,11 +1,13 @@
 :root {
-    --color-primary: #4B69FD;
+    --color-primary: #213555;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
     --color-button-danger: #ec1515;
     --color-button-danger-hover: #c20808;
+
+    --color-text-ganador:#FB4141;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -46,13 +48,14 @@ body {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 34px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
-}
+    flex-direction: row;
+    align-items: flex-start;
+    height: auto;
+    padding: 30px;
+    /* width: 100%; */
+}   
 
 /* Títulos */
 .main-title {
@@ -67,9 +70,18 @@ body {
     font-family: "Inter", serif;
     font-size: 36px;
     font-weight: 700;
-    color: var(--color-primary);
     margin: 10px 0;
     text-align: center;
+}
+
+.title1{
+    color: var(--color-text);
+}
+.title2{
+    color: var(--color-white);
+    border-bottom: 3px solid var(--color-white); /* Línea debajo del h2 */
+    padding-bottom: 5px; /* Espacio entre el texto y la línea */
+
 }
 
 /* Contenedores de entrada y botón */
@@ -78,7 +90,7 @@ body {
     justify-content: center;
     width: 100%;
     max-width: 600px;
-    margin-top: 20px;
+    margin: 2.5rem 0;
 }
 
 .input-name {
@@ -108,6 +120,32 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* estilos de secciones internas de contenidor principal */
+.container{
+    /* border: 2px solid black; */
+    padding: 0 5px;
+    margin: 0 5px;
+    height: 18.2rem;
+}
+
+.content70{
+    width: 70%;
+    display: flex;
+    /* height: 45%; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.content30{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    background: var(--color-primary);
+    border-radius: 15px;
+}
+
 /* Estilos de botón */
 button {
     padding: 15px 30px;
@@ -132,15 +170,15 @@ button {
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    color: var(--color-white);
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
 }
 
 .result-list {
-    margin-top: 15px;
-    color: #05DF05;
+    margin: 0px 0;
+    color: var(--color-button);
     font-size: 22px;
     font-weight: bold;
     text-align: center;
@@ -183,4 +221,155 @@ ul {
 
 .button-clean:disabled {
     background: #898989;
+}
+
+/* lista de amigos */
+/* Listas */
+ul {
+    list-style: none;
+    color: var(--color-white);
+    font: 18px "Inter", sans-serif;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin: 0;
+    color: var(--color-button);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.name-list {
+    width: 80%;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    counter-reset: contador;
+    margin: 0;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.name-list li {
+    counter-increment: contador;
+}
+
+.name-list li::before {
+    content: counter(contador) ". ";
+}
+
+.partes1 {
+    height: 82%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.partes2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    /* margin: 0 2rem; */
+    height: 18%;
+    width: 100%;
+    border-top: 3px solid var(--color-white);
+}
+
+.partes2 h3 {
+    margin: 0 10px 0 0;
+    color: var(--color-white);
+    padding-right: 1.5rem;
+}
+
+
+/* responsividad */
+
+@media (max-width: 768px) {
+    /* Banner */
+    .header-banner {
+        /* height: 20rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Sección de entrada */
+        
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    .content70{
+        height: 22rem;
+        width: 90%;
+    }
+    .content30{
+        height: 22rem;
+        width: 90%;
+        margin: 1rem 0;
+        border-radius: 34px;
+    }
+    .header-banner img {
+        height: 70%;
+    }
+    /* Títulos */
+    .main-title {
+        font-size: 48px;
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+        font-style: italic;
+        color: var(--color-white);
+    }
+    .section-title {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 10px 0;
+        text-align: center;
+    }
+    .input-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 600px;
+        margin:.5rem 0 2.5rem 0 ;
+    }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 9rem;
+        margin: 0 0 1.1rem 0;
+    }
+    /* Botón de sortear título */
+    .button-draw {
+        width: 50%;
+        padding: 10px 5px;
+        color: var(--color-white);
+        font-size: 15px;
+    }
+
+    .button-draw img {
+        margin: 0 15px 0 2px;
+        width: 30px;
+    }
+
+    /* boton limpiar lista */
+    .button-clean {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        padding: 16px 5px;
+        color: var(--color-white);
+        background-color: var(--color-button-danger);
+        font-size: 15px;
+    }
+
 }

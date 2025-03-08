@@ -18,30 +18,45 @@
         </header>
         
         <section class="input-section">
-            <h2 class="section-title">Digite el nombre de sus amigos</h2>
-            <div class="input-wrapper">
-                <label for="amigo">
-                    
-                </label>
-                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
-                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
-            </div>
-           
-            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
-            <div class="button-container">
-                <button id="btn-sortear" class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
-                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
-                    <span id="text-btn">Sortear amigo</span>
-                </button>
+            <section class="container content70">
+                <h2 class="section-title title1">Digite el nombre de sus amigos</h2>
+                <div class="input-wrapper">
+                    <label for="amigo">
+                        
+                    </label>
+                    <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                    <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+                </div>
+                <div class="button-container">
+                    <button id="btn-sortear" class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                        <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                        <span id="text-btn">Sortear amigo</span>
+                    </button>
+    
+                    <button id="btn-limpiar" class="button-clean" onclick="condicionesIniciales()" aria-label="Sortear amigo secreto" disabled>
+                        Limpiar lista
+                    </button>
+                </div>
+               
+            </section>
 
-                <button id="btn-limpiar" class="button-clean" onclick="condicionesIniciales()" aria-label="Sortear amigo secreto" disabled>
-                    Limpiar lista
-                </button>
-            </div>
+            <section class="container content30 ">
+
+                <div class="partes1">
+                    <h2 class="section-title title2">Lista de amigos</h2>
+
+                    <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+                </div>
+                <div class="partes2">
+                    <h3>Tu amigo secreto es: </h3>
+                    <ul id="resultado" class="result-list" aria-live="polite"></ul>
+                </div>
+
+            </section>
 
         </section>
+
     </main>
 
     <script src="app.js" defer></script>

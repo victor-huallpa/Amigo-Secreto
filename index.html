@@ -58,11 +58,20 @@
         </section>
 
     </main>
-    <!-- Contenedor de la alerta personalizada -->
-    <!-- Contenedor de la alerta personalizada (OCULTA AL INICIO) -->
+
+    <!-- Contenedor de la alerta personalizada de tipo alert-->
     <div class="custom-alert">
         <span class="alert-message">Mensaje de alerta</span>
         <button onclick="cerrarAlerta()">X</button>
+    </div>
+
+    <!-- contenedor de la alerta de tipo confirm -->
+    <div id="customConfirm" class="custom-alert alert-blue">
+        <span id="confirmMessage"></span>
+        <div>
+            <button id="confirmYes">Sí</button>
+            <button id="confirmNo">No</button>
+        </div>
     </div>
 
 

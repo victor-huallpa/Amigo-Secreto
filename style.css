@@ -10,6 +10,7 @@
     --color-text-ganador:#FB4141;
     --color-text: #444444;
     --color-white: #FFFFFF;
+    --color-texto-marcado: #afa8a8;
 }
 
 /* Estilos generales */
@@ -167,13 +168,8 @@ button {
     background-color: #a1a1a1;
 }
 
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-white);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
+.texto-marcado{
+    color: var(--color-texto-marcado);
 }
 
 .result-list {
@@ -224,7 +220,6 @@ ul {
 }
 
 /* lista de amigos */
-/* Listas */
 ul {
     list-style: none;
     color: var(--color-white);
@@ -306,8 +301,7 @@ ul {
     transform: translate(-50%, -50%) scale(0.8);
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
-
-/* Clase para mostrar la alerta */
+ /* Clase para mostrar la alerta */
 .show-alert {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -324,7 +318,7 @@ ul {
     border-radius: 5px;
 }
 
-/* Colores según tipo */
+/* Colores alerta */
 .alert-red {
     background-color: #f44336; /* Rojo */
 }
@@ -350,7 +344,6 @@ ul {
     background-color: #2196F3;
     color: white;
 }
-
 
 /* responsividad */
 
